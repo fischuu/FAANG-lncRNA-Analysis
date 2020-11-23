@@ -1,0 +1,11 @@
+#make a list of objects
+a-list $1 > object_list_bucket123
+
+#use the list in for loop
+for ob in $(cat object_list_bucket123)
+do
+  a-get $ob
+done  
+
+#remove the object list
+rm object_list_bucket123
