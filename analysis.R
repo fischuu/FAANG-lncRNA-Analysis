@@ -60,3 +60,11 @@ a-list lncrna_capra_hircus/capra_hircus/BAM | grep '.bam' | cut -d'/' -f4  | cut
   sum(is.element(as.vector(as.matrix(sampleList[,1])),capraSamples))
 
   
+  susSamples[!is.element(susSamples, sampleList[,1])]
+  bosSamples[!is.element(bosSamples, sampleList[,1])]
+  ovisSamples[!is.element(ovisSamples, sampleList[,1])]
+  gallusSamples[!is.element(gallusSamples, sampleList[,1])]
+  equusSamples[!is.element(equusSamples, sampleList[,1])]
+  capraSamples[!is.element(capraSamples, sampleList[,1])]
+  
+  
