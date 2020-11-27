@@ -3,19 +3,19 @@
 # sudo apt install s3cmd python-openstackclient
 # source allas_conf --mode s3cmd --user fischerd --project project_2001289
 
-a-list lncrna_bos_taurus/bos_taurus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > bos_taurus_gtf.txt
-a-list lncrna_capra_hircus/capra_hircus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > capra_hircus_gtf.txt
-a-list lncrna_equus_caballus/equus_caballus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > equus_caballus_gtf.txt
-a-list lncrna_gallus_gallus/gallus_gallus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > gallus_gallus_gtf.txt
-a-list lncrna_ovis_aries/ovis_aries/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > ovis_aries_gtf.txt
-a-list lncrna_sus_scrofa/sus_scrofa/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > sus_scrofa_gtf.txt
+#a-list lncrna_bos_taurus/bos_taurus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > bos_taurus_gtf.txt
+#a-list lncrna_capra_hircus/capra_hircus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > capra_hircus_gtf.txt
+#a-list lncrna_equus_caballus/equus_caballus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > equus_caballus_gtf.txt
+#a-list lncrna_gallus_gallus/gallus_gallus/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > gallus_gallus_gtf.txt
+#a-list lncrna_ovis_aries/ovis_aries/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > ovis_aries_gtf.txt
+#a-list lncrna_sus_scrofa/sus_scrofa/GTF/Ref_fc | cut -d '/' -f5 | cut -d'_' -f1 | sort | uniq > sus_scrofa_gtf.txt
 
-a-list lncrna_sus_scrofa/sus_scrofa/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > sus_scrofa_bam.csv
-a-list lncrna_bos_taurus/bos_taurus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > bos_taurus_bam.csv
-a-list lncrna_ovis_aries/ovis_aries/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > ovis_aries_bam.csv
-a-list lncrna_gallus_gallus/gallus_gallus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > gallus_gallus_bam.csv
-a-list lncrna_equus_caballus/equus_caballus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > equus_caballus_bam.csv
-a-list lncrna_capra_hircus/capra_hircus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > capra_hircus_bam.csv
+#a-list lncrna_sus_scrofa/sus_scrofa/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > sus_scrofa_bam.csv
+#a-list lncrna_bos_taurus/bos_taurus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > bos_taurus_bam.csv
+#a-list lncrna_ovis_aries/ovis_aries/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > ovis_aries_bam.csv
+#a-list lncrna_gallus_gallus/gallus_gallus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > gallus_gallus_bam.csv
+#a-list lncrna_equus_caballus/equus_caballus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > equus_caballus_bam.csv
+#a-list lncrna_capra_hircus/capra_hircus/BAM | grep '.bam' | cut -d'/' -f4  | cut -d'_' -f1 | cut -d'.' -f1 | sort | uniq > capra_hircus_bam.csv
 
 # a-list lncrna_sus_scrofa/sus_scrofa/FASTQ/ | tr -s ' ' | cut -d ' ' -f 4 | cut -d '/' -f 6 | grep gz.md5 | cut -d '_' -f1 | sort | uniq > sus_scrofa_fastq.csv
 # a-list lncrna_bos_taurus/bos_taurus/FASTQ/ | tr -s ' ' | cut -d ' ' -f 4 | cut -d '/' -f 6 | grep gz.md5 | cut -d '_' -f1 | sort | uniq > bos_taurus_fastq.csv
@@ -52,6 +52,8 @@ a-list lncrna_capra_hircus/capra_hircus/BAM | grep '.bam' | cut -d'/' -f4  | cut
                       length(equusSamples),
                       length(capraSamples))
 
+  totalSamples
+  
   sum(is.element(as.vector(as.matrix(sampleList[,1])),susSamples))+
   sum(is.element(as.vector(as.matrix(sampleList[,1])),bosSamples))+
   sum(is.element(as.vector(as.matrix(sampleList[,1])),ovisSamples))+
@@ -60,11 +62,28 @@ a-list lncrna_capra_hircus/capra_hircus/BAM | grep '.bam' | cut -d'/' -f4  | cut
   sum(is.element(as.vector(as.matrix(sampleList[,1])),capraSamples))
 
   
-  susSamples[!is.element(susSamples, sampleList[,1])]
-  bosSamples[!is.element(bosSamples, sampleList[,1])]
-  ovisSamples[!is.element(ovisSamples, sampleList[,1])]
-  gallusSamples[!is.element(gallusSamples, sampleList[,1])]
-  equusSamples[!is.element(equusSamples, sampleList[,1])]
-  capraSamples[!is.element(capraSamples, sampleList[,1])]
-  
+# Check if we have the annotation for each processed samples (those vectors here should be empty)
+  susSamples[!is.element(susSamples, as.vector(as.matrix(sampleList[,1])))]
+  bosSamples[!is.element(bosSamples, as.vector(as.matrix(sampleList[,1])))]
+  ovisSamples[!is.element(ovisSamples, as.vector(as.matrix(sampleList[,1])))]
+  gallusSamples[!is.element(gallusSamples, as.vector(as.matrix(sampleList[,1])))]
+  equusSamples[!is.element(equusSamples, as.vector(as.matrix(sampleList[,1])))]
+  capraSamples[!is.element(capraSamples, as.vector(as.matrix(sampleList[,1])))]
+
+# Clean the sampleList, remove all the samples from it that have not been used in our study
+  sampleList <- unique(sampleList[is.element(as.vector(as.matrix(sampleList[,1])), c(susSamples, bosSamples, ovisSamples, gallusSamples, equusSamples, capraSamples)),])
+
+  cat("Number of samples in annot:", nrow(sampleList), "\n")
+  cat("Number of samples in study:", totalSamples, "\n")
+  cat("Number of pigs            :", length(susSamples),"\n")
+  cat("Number of cows            :", length(bosSamples),"\n")
+  cat("Number of sheeps          :", length(ovisSamples),"\n")
+  cat("Number of chicken         :", length(gallusSamples),"\n")
+  cat("Number of horses          :", length(equusSamples),"\n")
+  cat("Number of goats           :", length(capraSamples),"\n")
+      
+# Now check for double entries
+  tmp <- table(sampleList[,1])
+  doubleEntries <- names(tmp[tmp>1])
+  sampleList[is.element(as.vector(as.matrix(sampleList[,1])), doubleEntries),]
   
